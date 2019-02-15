@@ -2,16 +2,25 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import Img from "gatsby-image"
+import BackgroundImage from "gatsby-background-image"
 
 import morphicLogo from "../images/animated-morphic-logo.svg"
 
 export default ({ data }) => (
 	<div>
     <h1>Hello gatsby Image!</h1>
-    <Img fluid={ data.heroBackground.childImageSharp.fluid } />
+    <BackgroundImage 
+      Tag="section"
+      fluid={ data.heroBackground.childImageSharp.fluid }>
+      <h1>Breaking Down the Barriers</h1>
+    </BackgroundImage>
     <Img fluid={ data.kidsTablet.childImageSharp.fluid } />
-    <Img fluid={ data.gpiiBackground.childImageSharp.fluid } />
-    <img src={ morphicLogo } alt="" />
+    <BackgroundImage 
+      Tag="section"
+      fluid={ data.gpiiBackground.childImageSharp.fluid }>
+      <h2>A World that adatps to your needs</h2>
+    </BackgroundImage>
+    <img src={ morphicLogo } alt="Morphic Logo" />
 	</div>
 )
 
