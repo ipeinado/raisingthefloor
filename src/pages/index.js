@@ -4,15 +4,12 @@ import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import BackgroundImage from "gatsby-background-image"
 
-import morphicLogo from "../images/animated-morphic-logo.svg"
-
 export default ({ data }) => (
 	<div>
     <h1>Hello gatsby Image!</h1>
     <Img fluid={ data.heroBackground.childImageSharp.fluid } />
     <Img fluid={ data.kidsTablet.childImageSharp.fluid } />
     <Img fluid={ data.gpiiBackground.childImageSharp.fluid } />
-    <img src={ morphicLogo} />
 	</div>
 )
 
