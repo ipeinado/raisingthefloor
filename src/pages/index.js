@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import Img from "gatsby-image"
+import BackgroundImage from "gatsby-background-image"
 
 import morphicLogo from "../images/animated-morphic-logo.svg"
 
@@ -9,7 +10,9 @@ export default ({ data }) => (
 	<div>
     <h1>Hello gatsby Image!</h1>
 
-    <Img fluid={ data.heroBackground.childImageSharp.fluid } />
+    <BackgroundImage Tag="section" fluid={ data.heroBackground.childImageSharp.fluid } >
+      <h1 style={{ color: `#fff`, }}>Testing Background Images</h1>
+    </BackgroundImage>
 
     <Img fluid={ data.kidsTablet.childImageSharp.fluid } />
 
